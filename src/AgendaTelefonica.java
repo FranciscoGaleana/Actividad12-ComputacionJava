@@ -7,10 +7,12 @@ public class AgendaTelefonica {
 
     //Método para agregar un contacto nuevo
     public void agregarContacto(Contacto contacto) {
+        //Si ya existe un contacto con ese nombre se avisa y no se agrega nada
         if (this.contactos.containsKey(contacto.getNombre())) {
             System.out.println("Ya existe un contacto con ese nombre");
         }
         
+        //De lo contrario, se agrega al contacto ingresado
         else {
             this.contactos.put(contacto.getNombre(), contacto);
         }
